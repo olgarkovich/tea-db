@@ -13,6 +13,9 @@
             list-style-type: none;
         }
     </style>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -31,10 +34,9 @@
 <div class="content-block">
     <div>
         <article>
-            <h3 class="main-text" style="margin-left: 10px;">Черный чай</h3>
-            <p style="margin: 10px"><img src="picture/puer.jpg" alt="tea" width="170" height="170"
-                                         style="margin: 10px;" class="left-item"/> Желтый
-                чай</p>
+            <h3 id="detail-name" class="main-text" style="margin-left: 10px;"></h3>
+            <p id="detail-description" style="margin: 10px"><img id="detail-img" alt="tea" width="170" height="170"
+                                                                 style="margin: 10px;" class="left-item"/></p>
         </article>
     </div>
     <div>
@@ -42,13 +44,13 @@
         <p><input class="in-form" name="comment" id="comment"></p>
         <p><input class="in-btn" type="submit" value="Опубликовать"/></p>
     </div>
-    <div>
-        <div class="comment-form">
-            <p>Чай топ</p>
-        </div>
-        <div class="comment-form">
-            <p>Советуем</p>
-        </div>
+    <div id="comments">
+        <!--        <div class="comment-form">-->
+        <!--            <p>Чай топ</p>-->
+        <!--        </div>-->
+        <!--        <div class="comment-form">-->
+        <!--            <p>Советуем</p>-->
+        <!--        </div>-->
 
     </div>
 </div>
@@ -59,5 +61,22 @@
     </address>
     <p>Tea db©</p>
 </footer>
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyDzMRnej5rMyDWmcmjmxEb3_I5GdOX7B3A",
+        authDomain: "teadb-97766.firebaseapp.com",
+        projectId: "teadb-97766",
+        storageBucket: "teadb-97766.appspot.com",
+        messagingSenderId: "268826092965",
+        appId: "1:268826092965:web:b12748b5dcd5ec36a7744c",
+        measurementId: "G-WZ85RCPPZ3"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore()
+    db.settings({timestampsInSnapshots: true})
+</script>
+<script src="detail.js"></script>
+
 </body>
 </html>

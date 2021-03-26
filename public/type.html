@@ -13,6 +13,10 @@
             list-style-type: none;
         }
     </style>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -31,40 +35,10 @@
 </pre>
 <div class="title-type-block">
     <section id="#main-info">
-        <article>
-            <h3 class="main-text" style="margin-left: 10px">Черный чай</h3>
-            <p style="margin: 10px"><img src="picture/puer.jpg" alt="tea" width="170" height="170"
-                                         style="margin-right: 10px; margin-bottom: 10px" class="left-item"/> Чёрный чай
-                —
-                вид
-                чая, подвергающийся полной ферментации (окислению) в течение от двух недель до месяца (по традиционной
-                технологии). Традиционно наиболее популярный вид чая в Европе, включая Россию.
-                Название «чёрный чай» закрепилось в Европе, в Китае этот тип чая называется кра́сным, а «чёрным чаем»
-                китайцы
-                именуют пуэр.
-                Чёрный чай бывает байховым, гранулированным, пакетированным и плиточным. Может быть ароматизирован,
-                например,
-                бергамотовым маслом («Эрл Грей»).
-                Вкус чёрного чая лишён горечи, настой имеет оранжевый или красный цвет. Чай обладает сложным действием,
-                одновременно тонизирующим и успокаивающим.
-                Подаётся обычно без добавок или с сахаром, лимоном, молоком или сливками, часто сопровождает десерт.
-                Научные
-                исследования показали, что добавление мёда усиливает антиоксидантную активность черного чая с лимоном.
-                Наиболее
-                известные разновидности чёрного чая: Кимун, Юньнань, ассамский чай, цейлонский, Эрл Грей, Лапсанг
-                Сушонг.
-                Часто,
-                к чёрным чаям ошибочно относят Дарджилинг, полуферментированный чай не подвергающийся полной
-                ферментации.
-                Распространённую международную классификацию чёрного чая по степени измельчённости чайного листа см. в
-                Категории
-                чайного листа и Чай. Классификация.
-                Красные чаи получили большое распространение среди европейцев, потому что этот сорт чая не подвергался
-                большим
-                изменениям и порче при его транспортировке. Именно этот сорт чая европейцы (в частности, англичане)
-                начали
-                культивировать в своих колониях после потери Китая как источника чая.</p>
-        </article>
+
+            <h3 id="type-name" class="main-text" style="margin-left: 10px"></h3>
+            <p id="type-description" style="margin: 10px"></p>
+
     </section>
 </div>
 <pre>
@@ -77,205 +51,7 @@
         </div>
 
         <div style="margin: 20px;">
-            <ul style="display: grid; grid-template-columns: repeat(4, 1fr);">
-                <li style="margin-top: 10px">
-                    <div class="tea-block">
-                        <table>
-                            <tr>
-                                <td>
-                                    <a href="detail.html"><img src="picture/yellow_tea.jpg" class="img-size"
-                                                               alt="yellow"></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3 class="type-text">Желтый чай</h3>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="rating-mini" style="margin-left: 60px; ">
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </li>
-
-                <li style="margin-top: 10px">
-                    <div class="tea-block">
-                        <table>
-                            <tr>
-                                <td>
-                                    <a href="detail.html"><img src="picture/yellow_tea.jpg" class="img-size"
-                                                               alt="yellow"></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3 class="type-text">Желтый чай</h3>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="rating-mini" style="margin-left: 60px; ">
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </li>
-                <li style="margin-top: 10px">
-                    <div class="tea-block">
-                        <table>
-                            <tr>
-                                <td>
-                                    <a href="detail.html"><img src="picture/yellow_tea.jpg" class="img-size"
-                                                               alt="yellow"></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3 class="type-text">Желтый чай</h3>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="rating-mini" style="margin-left: 60px; ">
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </li>
-                <li style="margin-top: 10px">
-                    <div class="tea-block">
-                        <table>
-                            <tr>
-                                <td>
-                                    <a href="detail.html"><img src="picture/yellow_tea.jpg" class="img-size"
-                                                               alt="yellow"></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3 class="type-text">Желтый чай</h3>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="rating-mini" style="margin-left: 60px; ">
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </li>
-                <li style="margin-top: 10px">
-                    <div class="tea-block">
-                        <table>
-                            <tr>
-                                <td>
-                                    <a href="detail.html"><img src="picture/yellow_tea.jpg" class="img-size"
-                                                               alt="yellow"></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3 class="type-text">Желтый чай</h3>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="rating-mini" style="margin-left: 60px; ">
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </li>
-                <li style="margin-top: 10px">
-                    <div class="tea-block">
-                        <table>
-                            <tr>
-                                <td>
-                                    <a href="detail.html"><img src="picture/yellow_tea.jpg" class="img-size"
-                                                               alt="yellow"></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3 class="type-text">Желтый чай</h3>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="rating-mini" style="margin-left: 60px; ">
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </li>
-                <li style="margin-top: 10px">
-                    <div class="tea-block">
-                        <table>
-                            <tr>
-                                <td>
-                                    <a href="detail.html"><img src="picture/yellow_tea.jpg" class="img-size"
-                                                               alt="yellow"></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3 class="type-text">Желтый чай</h3>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="rating-mini" style="margin-left: 60px; ">
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </li>
-            </ul>
+            <ul id="type-list" style="display: grid; grid-template-columns: repeat(4, 1fr);"></ul>
         </div>
     </section>
 </div>
@@ -285,5 +61,24 @@
     </address>
     <p>Tea db©</p>
 </footer>
+
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyDzMRnej5rMyDWmcmjmxEb3_I5GdOX7B3A",
+        authDomain: "teadb-97766.firebaseapp.com",
+        projectId: "teadb-97766",
+        storageBucket: "teadb-97766.appspot.com",
+        messagingSenderId: "268826092965",
+        appId: "1:268826092965:web:b12748b5dcd5ec36a7744c",
+        measurementId: "G-WZ85RCPPZ3"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore()
+    db.settings({timestampsInSnapshots: true})
+</script>
+<script src="type.js"></script>
 </body>
 </html>

@@ -13,6 +13,9 @@
             list-style-type: none;
         }
     </style>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -45,164 +48,7 @@
     </div>
 
     <div style="margin-left: 70px;">
-        <ul>
-            <li>
-                <div class="tea-list">
-                    <table>
-                        <tr>
-                            <td>
-                                <img src="picture/white_tea.jpg" class="img-size" alt="white">
-                            </td>
-                            <td>
-                                <article>
-                                    <h3>Белый чай</h3>
-                                    <p>Белый чай обладает уникальным, ни с чем не сравнимым ароматом и вкусом. В его
-                                        букете улавливаются тонкие нотки цветов, меда, тропических фруктов, свежей
-                                        зелени, ягод, березового сока и многие другие тона.</p>
-                                    <button class="tea-btn" onclick='location.href="type.html"'>Перейти к чаю</button>
-                                </article>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </li>
-
-            <li>
-                <div class="tea-list">
-                    <table>
-                        <tr>
-                            <td>
-                                <img src="picture/yellow_tea.jpg" class="img-size" alt="yellow">
-                            </td>
-                            <td>
-                                <article>
-                                    <h3>Желтый чай</h3>
-                                    <p>Аромат жёлтого чая уникален, в нём есть копчёные нотки, присущие только этому
-                                        чаю.
-                                        Чаинки покрыты белым ворсом, тёмно-оливкового цвета с серебристым пушком. Аромат
-                                        запоминающийся, яркие копченые нотки. Вкус сладковатый, но не избыточный,
-                                        бодрящий,
-                                        оригинальное послевкусие.</p>
-                                    <button class="tea-btn" onclick='location.href="type.html"'>Перейти к чаю</button>
-                                </article>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </li>
-
-            <li>
-                <div class="tea-list">
-                    <table>
-                        <tr>
-                            <td>
-                                <img src="picture/green_tea.jpg" class="img-size" alt="green">
-                            </td>
-                            <td>
-                                <article>
-                                    <h3>Зеленый чай</h3>
-                                    <p>Зеленый чай — один из самых популярных видов. Изготавливается из чайных листов,
-                                        который сушат сразу после сбора. Хороший напиток имеет благородный запах с
-                                        жасминовыми нотками. Цвет желтовато-зеленоватый. Вкус насыщенный, иногда
-                                        терпкий, в
-                                        хороших сортах — сладковатый.</p>
-                                    <button class="tea-btn" onclick='location.href="type.html"'>Перейти к чаю</button>
-                                </article>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </li>
-
-            <li>
-                <div class="tea-list">
-                    <table>
-                        <tr>
-                            <td>
-                                <img src="picture/red_tea.jpg" class="img-size" alt="red">
-                            </td>
-                            <td>
-                                <article>
-                                    <h3>Красный чай</h3>
-                                    <p>Китайский красный чай – это это сильно ферментированный чай, выращенный в Китае и
-                                        называемый черным в других странах. При заваривании дает красно-коричневый цвет
-                                        настоя.</p>
-                                    <button class="tea-btn" onclick='location.href="type.html"'>Перейти к чаю</button>
-                                </article>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </li>
-
-            <li>
-                <div class="tea-list">
-                    <table>
-                        <tr>
-                            <td>
-                                <img src="picture/puer.jpg" class="img-size" alt="puer">
-                            </td>
-                            <td>
-                                <article>
-                                    <h3>Пуэр</h3>
-                                    <p>Создается на основе старых чайных листьев. Напиток характеризуется
-                                        темно-коричневым,
-                                        красным или ореховым оттенком, запах имеет специфический — землянистый. Также
-                                        удивляет неординарными вкусовыми качествами — земляным привкусом со сладковатым
-                                        послевкусием.</p>
-                                    <button class="tea-btn" onclick='location.href="type.html"'>Перейти к чаю</button>
-                                </article>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </li>
-
-            <li>
-                <div class="tea-list">
-                    <table>
-                        <tr>
-                            <td>
-                                <img src="picture/ulun.jpg" class="img-size" alt="ulun">
-                            </td>
-                            <td>
-                                <article>
-                                    <h3>Улун</h3>
-                                    <p>После заваривания лист приобретает красный цвет по краям и зеленый посередине.
-                                        Оттенок приготовленного напитка варьируется от бледно-нефритового до
-                                        темно-красного.
-                                        Характеризуется острым, пряным, персиковым вкусом, цветочным ароматом.</p>
-                                    <button class="tea-btn" onclick='location.href="type.html"'>Перейти к чаю</button>
-                                </article>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </li>
-
-            <li>
-                <div class="tea-list">
-                    <table>
-                        <tr>
-                            <td>
-                                <img src="picture/black_tea.jpg" class="img-size" alt="black">
-                            </td>
-                            <td>
-                                <article>
-                                    <h3>Черный чай</h3>
-                                    <p>Черный чай изготавливается из листьев и не распустившихся почек. Вкус этого вида
-                                        чая
-                                        насыщенный, терпкий, но без горечи, иногда даже встречаются сладковатые оттенки.
-                                        Аромат — бальзамический, смолистый. Цвет напитка красно-коричневый, красный или
-                                        оранжевый.</p>
-                                    <button class="tea-btn" onclick='location.href="type.html"'>Перейти к чаю</button>
-                                </article>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </li>
-        </ul>
+        <ul id="tea-list"></ul>
     </div>
 </div>
 <footer>
@@ -211,5 +57,22 @@
     </address>
     <p>Tea db©</p>
 </footer>
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyDzMRnej5rMyDWmcmjmxEb3_I5GdOX7B3A",
+        authDomain: "teadb-97766.firebaseapp.com",
+        projectId: "teadb-97766",
+        storageBucket: "teadb-97766.appspot.com",
+        messagingSenderId: "268826092965",
+        appId: "1:268826092965:web:b12748b5dcd5ec36a7744c",
+        measurementId: "G-WZ85RCPPZ3"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore()
+    db.settings({timestampsInSnapshots: true})
+</script>
+
+<script src="index.js"></script>
 </body>
 </html>
