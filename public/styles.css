@@ -66,8 +66,7 @@
     width: 900px;
     margin: auto;
     background-color: #f6f6f6;
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
+    animation: bigger 500ms;
     transform: scale(1.1);
 }
 
@@ -88,14 +87,28 @@
 
 .tea-block:hover {
     border: 10px solid #eaeaea;
-    border-radius: 40px;
+    border-radius: 20px;
     height: auto;
     width: 200px;
     margin: auto;
     background-color: #f6f6f6;
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+    animation: bigger 500ms;
+    transform: scale(1.1);
+}
+
+@keyframes bigger {
+    0% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1)
+    }
+    50% {
+        -webkit-transform: scale(1.1, 1.1);
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        -webkit-transform: scale(1.1, 1.1);
+        transform: scale(1.1, 1.1);
+    }
 }
 
 .tea-btn {
@@ -140,9 +153,19 @@
     border-width: 5px;
     border-radius: 10px;
     border-color: darkgreen;
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
+    animation: bigger-btn 500ms;
     transform: scale(1.2);
+}
+
+@keyframes bigger-btn {
+    0% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1)
+    }
+    100% {
+        -webkit-transform: scale(1.2, 1.2);
+        transform: scale(1.2, 1.2);
+    }
 }
 
 .img-size {
@@ -161,26 +184,6 @@
     color: darkgreen;
     margin-left: 100px;
     font-family: 'Arimo', sans-serif;
-}
-
-.rating-mini {
-    display: inline-block;
-    font-size: 0;
-}
-
-.rating-mini span {
-    padding: 0;
-    font-size: 20px;
-    line-height: 1;
-    color: lightgrey;
-}
-
-.rating-mini > span:before {
-    content: '★';
-}
-
-.rating-mini > span.active {
-    color: gold;
 }
 
 .type-text {
@@ -285,9 +288,22 @@
     background-color: #efefef;
     padding-left: 20px;
     padding-right: 20px;
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    animation: pulsing 2s infinite;
+}
+
+@keyframes pulsing {
+    0% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1)
+    }
+    50% {
+        -webkit-transform: scale(1.1, 1.1);
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
 }
 
 .footer-bg {
