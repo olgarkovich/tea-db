@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Главная</title>
+    <title>Чайная марка</title>
     <style>
         body {
             background: #C6FFAB url(picture/index_bg.jpg) no-repeat;
@@ -23,7 +23,7 @@
     <nav class="top-menu">
         <ul class="menu-main">
             <li class="left-item"><a href="index.html">Главная</a></li>
-            <li class="right-item"><a href="">Вход</a></li>
+<!--            <li class="right-item"><a href="">Вход</a></li>-->
         </ul>
     </nav>
 </header>
@@ -35,27 +35,28 @@
     <div>
         <article>
             <h3 id="detail-name" class="main-text" style="margin-left: 10px;"></h3>
-            <p id="detail-description" style="margin: 10px"><img id="detail-img" alt="tea" width="170" height="170"
-                                                                 style="margin: 10px;" class="left-item"/></p>
+            <h4 id="detail-description" style="margin: 10px"></h4>
         </article>
     </div>
     <div>
         <p><label for="comment">Оставьте комментарий</label></p>
-        <p><input class="in-form" name="comment" id="comment"></p>
-        <p><input class="in-btn" type="submit" value="Опубликовать"/></p>
+        <form id="input-form">
+            <p><input class="in-form" placeholder="Ваш комментарий" name="comment" id="comment"></p>
+            <button class="in-btn" type="submit">Опубликовать</button>
+            <script>
+                comment.value = localStorage.getItem('comment');
+                comment.oninput = () => {
+                    localStorage.setItem('comment', comment.value)
+                };
+            </script>
+        </form>
     </div>
-    <div id="comments">
-        <!--        <div class="comment-form">-->
-        <!--            <p>Чай топ</p>-->
-        <!--        </div>-->
-        <!--        <div class="comment-form">-->
-        <!--            <p>Советуем</p>-->
-        <!--        </div>-->
-
-    </div>
+    <hr>
+    <h3>Комментарии, оставленные ранее:</h3>
+    <div id="comments"></div>
 </div>
 
-<footer class="footer-bottom">
+<footer class="footer-bg">
     <address>
         Почта для связи <a class="a-link" href="mailto:olgagarkovich@gmail.com">Гаркович Ольга</a>.
     </address>

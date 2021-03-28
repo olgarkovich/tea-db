@@ -66,6 +66,9 @@
     width: 900px;
     margin: auto;
     background-color: #f6f6f6;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .tea-block {
@@ -76,13 +79,23 @@
     margin: auto;
 }
 
+.left-img {
+    float: left;
+    border: 3px solid #eaeaea;
+    border-radius: 20px;
+    margin: 10px
+}
+
 .tea-block:hover {
     border: 10px solid #eaeaea;
-    border-radius: 20px;
+    border-radius: 40px;
     height: auto;
     width: 200px;
     margin: auto;
     background-color: #f6f6f6;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .tea-btn {
@@ -127,6 +140,9 @@
     border-width: 5px;
     border-radius: 10px;
     border-color: darkgreen;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .img-size {
@@ -190,6 +206,7 @@
     height: auto;
     width: 1200px;
     margin: auto;
+    padding: 10px;
 }
 
 .title-type-block {
@@ -209,12 +226,6 @@
     width: 800px;
     margin: auto;
     padding: 30px;
-}
-
-.footer-bottom {
-    position: absolute;
-    left: 0;
-    bottom: 0;
 }
 
 .a-link:link {
@@ -241,6 +252,15 @@
 }
 
 .in-form {
+    width: 200px;
+    height: auto;
+    background: #dbdbdb;
+    border: 1px solid darkgreen;
+}
+
+.in-form:focus {
+    width: 200px;
+    height: auto;
     background: #fffff2;
     border: 1px solid darkgreen;
 }
@@ -254,4 +274,26 @@
     background-color: #f6f6f6;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.comment-form:hover {
+    border: 3px solid #eaeaea;
+    border-radius: 10px;
+    height: auto;
+    width: 600px;
+    margin: auto;
+    background-color: #efefef;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.footer-bg {
+    position: relative;
+    background: #ffffbd;
+    padding: 10px;
+    margin: 20px;
+    border: 3px solid #fcff70;
 }
